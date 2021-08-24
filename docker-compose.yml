@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+    php-apache-environment:
+        container_name: php-apache
+        build:
+            context: ./main
+            dockerfile: Dockerfile
+        depends_on:
+            - db
+        volumes:
+            - ./main/src:/var/www/html/
+            - /var/run/docker.sock:/var/run/docker.sock
+        ports:
+            - 80:80
+        stdin_open: true
+        tty: true
+        networks: 
+            - dbConnect
+            - netConnect
+
+
+    db:
+        container_name: db
+        image: mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: CokGizliParola
+            MYSQL_USER: emr4h
+            MYSQL_PASSWORD: passwd
+        networks: 
+            - dbConnect
+        volumes:
+            - ./serverdatabase:/var/lib/mysql
+            - ./dbcustom.cnf:/etc/mysql/conf.d/custom.cnf
+        ports:
+            - 3306:3306
+
+            
+networks: 
+    dbConnect:
+        internal: true
+    netConnect:
