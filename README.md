@@ -2,27 +2,49 @@
 
 Docker based Cyber Security Training Web Platform (Docker tabanlı Siber Güvenlik Web Eğitim Platformu)
 
-# Kurulum
-  
+# Gereksinimler
+
   1. Docker kurulu bir işletim sistemi gereklidir. (Linux-Windows-Mac)
-  2. Docker compose kullanarak build edin:    docker-compose build 
-  3. Ve çalıştırın: docker compose up
-  4. Localhost:80 üzerinden ulaşabilecek durumdasınız
-  5. Projedeki labların çalışır hale getirmek için:
-     - XSS labları için :  ``` docker build -t xss1. ```  ( her  bir xss labı için ayrı ayrı yapılması gerekmektedir)
-     - Sql labları için :  ``` docker build -t sql_db . ``` ve daha sonra ``` docker build -t sqli1. ``` (her bir sql labı için ayrı ayrı yapılması gerekmektedir)
-     - Diger lablar için: ``` docker build -t  labismi .
-  6. Projeye erişebilirsiniz.
+  
+# Kurulum
+
+  1. Öncelikle projeyi indiriniz :  ``` git clone https://github.com/istec-iuc/letmehack.git ```
+ 
+  2. Ardından projedeki labların çalışır hale getirmek için (sql labları hariç) :
+  
+     - **labs** klasörü içerisine girin, içerisinde **labları ve isimlerini** göreceksiniz.
+     - Çalıştırmak istediğiniz labın olduğu dizinde ``` docker build -t  labismi . ```  şeklinde çalıştırınız. Örnek : ``` docker build -t  ce1 . ``` gibi.
+
+  ### Sql Labları için :
+  
+  - _sqli1 labı için_ : İlk önce lab klasörünün( /labs/sqli1 ) içerisindeki **db** klaörünün içerisine girip ``` docker build -t sql_db . ``` komutunu çalıştırın,   daha sonra aynı lab klasörünün içerisindeki **web** klaörünün içerisine girip``` docker build -t sqli1. ``` komutlarını çalıştırınız. 
+  - _sqli2 labı için_ : İlk önce lab klasörünün( /labs/sqli2 ) içerisindeki **db** klaörünün içerisine girip ``` docker build -t sql_db2 . ``` komutunu çalıştırın,   daha sonra aynı lab klasörünün içerisindeki **web** klaörünün içerisine girip``` docker build -t sqli2. ``` komutlarını çalıştırınız. 
+
+
+  3. Ardından ana dizine geri dönün ( indirdiğiniz letmehack klasörünün içerisine )  
+  4. Şu komutu çalıştırın: ``` docker compose up -d ```
+  5. ``` Localhost:80 ``` üzerinden projeye tarayıcınızdan erişebilirsiniz.
  
 
-# Görüntüler
+# Projenin Görünümü
 
 ![Image of 1](https://cdn.discordapp.com/attachments/861169509288247296/879642386689572894/Ekran_Resmi_2021-08-24_11.19.46.png)
 ![Image of 3](https://cdn.discordapp.com/attachments/861169509288247296/879642177406377984/Ekran_Resmi_2021-08-24_11.19.58.png)
-![Image of 2](https://cdn.discordapp.com/attachments/861169509288247296/879642163460329523/Ekran_Resmi_2021-08-24_11.23.08.png)
+
+# Kullanıcı Kayıdı
+
+Projedeki lablara kayıt olmadan erişmeye çalıştığınızda aşağıdaki gibi bir görüntüyle karşılaşırsınız. LetMeHack projesinde kullanıcı kaydı olmadan lablara erişim mümkün değildir.
+
 ![Image of 4](https://cdn.discordapp.com/attachments/861169509288247296/879642178345922560/Ekran_Resmi_2021-08-24_11.21.03.png)
-![Image of 5](https://cdn.discordapp.com/attachments/861169509288247296/879642112872812554/Ekran_Resmi_2021-08-24_11.05.19.png)
+
+Bunu çözmek için sitenin sağ üst tarafındaki kayıt butonuna tıklayıp gerekli bilgileri doldurduktan sonra ücretsiz bir şekilde kaydolabilirsiniz. Sonrasında aşağıdaki resimdeki gibi giriş ekranından kullanıcı girişinizi yapabilirsiniz.
+
+![Image of 2](https://cdn.discordapp.com/attachments/861169509288247296/879642163460329523/Ekran_Resmi_2021-08-24_11.23.08.png)
+
+Artık lablara eriştiğinizde aşağıdaki resimdeki gibi lab başlat butonu aktif olacaktır. Butona tıkladığınızda size atanan **link:port** şeklindeki url ye tıklayarak labı çözmeye başlayabilirsiniz.
+
 ![Image of 6](https://cdn.discordapp.com/attachments/861169509288247296/879642188416446484/Ekran_Resmi_2021-08-24_11.22.10.png)
+
 ![Image of 7](https://cdn.discordapp.com/attachments/861169509288247296/879642198470180894/Ekran_Resmi_2021-08-24_11.21.59.png)
 
 # İletişim
