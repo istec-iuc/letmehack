@@ -27,6 +27,27 @@ Docker based Cyber Security Training Web Platform (Docker tabanlı Siber Güvenl
 
 # İletişim
 
+## LinkedIn:  
+  - [Zeynep GÖK](https://www.linkedin.com/in/zeynepgok/)
+  - [Emrah YILDIRIM](https://www.linkedin.com/in/emr4h//)
+  - [Ömer KELEŞ](https://www.linkedin.com/in/%C3%B6mer-kele%C5%9F-377801175/)
+  - [Tugba DÖLEK](https://www.linkedin.com/in/tu%C4%9Fba-d%C3%B6lek/)
+  - [Ekin YAZICI](https://www.linkedin.com/in/ekin-yzc-0621b11b3/)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
   
 
                           
